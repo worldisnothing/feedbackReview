@@ -1,6 +1,6 @@
 Application for sorting feedbacks to 3 categories: **positive**, **negative** and **neutral**
 
-## Installation
+## Installation && Run
 ```bash
 pip install flask==3.1.1
 python app.py
