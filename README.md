@@ -1,16 +1,16 @@
 Application for sorting feedbacks to 3 categories: **positive**, **negative** and **neutral**
 
-## Installation && Run
+## Installation & Run
 ```bash
 pip install flask==3.1.1
 python app.py
 ```
 
-## Example
+## Examples
 
 ### POST /reviews/
 
-#### Request - neutral
+#### 😐 Request - neutral
 ```bash
 curl --location 'http://127.0.0.1:5555/reviews' \
 --header 'Content-Type: application/json' \
@@ -18,7 +18,7 @@ curl --location 'http://127.0.0.1:5555/reviews' \
     "text": "segtseg"
 }'
 ```
-#### Response - neutral
+#### 😐 Response - neutral
 ```bash
 {
     "created_at": "2025-07-08T17:02:59.005593",
@@ -28,7 +28,7 @@ curl --location 'http://127.0.0.1:5555/reviews' \
 }
 ```
 
-#### Request - positive
+#### 😊 Request - positive
 ```bash
 curl --location 'http://127.0.0.1:5555/reviews' \
 --header 'Content-Type: application/json' \
@@ -36,7 +36,7 @@ curl --location 'http://127.0.0.1:5555/reviews' \
     "text": "Хороший сервис"
 }'
 ```
-#### Response - positive
+#### 😊 Response - positive
 ```bash
 {
     "created_at": "2025-07-08T17:03:45.323873",
@@ -46,7 +46,7 @@ curl --location 'http://127.0.0.1:5555/reviews' \
 }
 ```
 
-#### Request - negative
+#### 😡 Request - negative
 ```bash
 curl --location 'http://127.0.0.1:5555/reviews' \
 --header 'Content-Type: application/json' \
@@ -54,7 +54,7 @@ curl --location 'http://127.0.0.1:5555/reviews' \
     "text": "Плохой сервис"
 }'
 ```
-#### Response - negative
+#### 😡 Response - negative
 ```bash
 {
     "created_at": "2025-07-08T17:04:17.807016",
@@ -95,12 +95,12 @@ curl http://localhost:5555/reviews
 ]
 ```
 
-#### Request - positive
+#### 😊 Request - positive
 ```bash
 curl http://localhost:5555/reviews?sentiment=positive
 ```
 
-### Response - positive
+### 😊 Response - positive
 ```bash
 [
     {
@@ -112,12 +112,12 @@ curl http://localhost:5555/reviews?sentiment=positive
 ]
 ```
 
-#### Request - negative
+#### 😡 Request - negative
 ```bash
 curl http://localhost:5555/reviews?sentiment=negative
 ```
 
-### Response - negative
+### 😡 Response - negative
 ```bash
 [
     {
@@ -129,12 +129,12 @@ curl http://localhost:5555/reviews?sentiment=negative
 ]
 ```
 
-#### Request - neutral
+#### 😐 Request - neutral
 ```bash
 curl http://localhost:5555/reviews?sentiment=negative
 ```
 
-### Response - neutral
+### 😐 Response - neutral
 ```bash
 [
     {
